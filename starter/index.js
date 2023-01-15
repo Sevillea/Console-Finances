@@ -170,17 +170,9 @@ var total = 0
     return avg;
   }
     
-  // Global variable:
+ 
 
-  
 
-  
-  /*
-  //This is the calculation for average profits
-  for (let sum += total < finances.length; index++){
-    average[index-1] = finances[index][1] - (finances[index-1][1]);
-  }
-  */
   
   
 
