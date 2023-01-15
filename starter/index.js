@@ -115,11 +115,12 @@ var finances = [
 ['Feb-2017', 671099],
 ]
 
-var total = 0
+
 var net =[]
 var change = [] //global var
 var least = ["", 99999999]
 var greatest = ["", 0]
+var total = 0
 
 //var least = ["",99999999]
 //var greatest = ["",0]
@@ -171,7 +172,7 @@ var greatest = ["", 0]
     
   // Global variable:
 
-  var changeAVG = averageChange(change)
+  
 
   
   /*
@@ -183,9 +184,8 @@ var greatest = ["", 0]
   
   
 
-  console.log(net)
+ 
   console.log(net.length)
-   
   console.log(total)
   console.log(finances.length)
  
