@@ -3,7 +3,7 @@
 ## Overview of Task
 
 
-For this activity, i mimicked a real world activity in which, by using JavaScript, I created code to analyse the finaincial records of a company. I was provided with the financial dataset which can be viewed in the initial array with the code. 
+For this activity, I mimicked a real world activity in which, by using JavaScript, I created code to analyse the finaincial records of a company. I was provided with the financial dataset which can be viewed in the initial array with the code. 
    
 The desired outcome of code was to log the following to the console:
 
