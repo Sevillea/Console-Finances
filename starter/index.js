@@ -129,7 +129,7 @@ var greatest = ["", 0]
     total += finances[index][1];  
         
   }
-// For loop: net profit and loss. 
+// For loop: net profit and loss over period.
   for (let index = 0; index < finances.length; index++){
     net += finances[index][1];
 
@@ -138,20 +138,41 @@ var greatest = ["", 0]
     }
 
   }
+  /*
+  for (let index = 1; index < finances.length; index++){
+    net[index-1] = finances[index][1] - (finances[index -1][1]);
+  */
 
-  // This is the code for the greatest profit calculation
+  // This is the code for the greatest profit calculation over period. If statement to introduce element[1] and least/greatest [1]:
   function getGreatest(element) {
     if (greatest[1] < element[1]){
       greatest[0] = element[0], greatest[1] = element[1];
     }
   }
 
+  function getLeast(element){
+    if (least[1] < element[1]){
+      least[0] = element[0], least[1] = element[1];
+    }
 
-  /*
-  for (let index = 1; index < finances.length; index++){
-    net[index-1] = finances[index][1] - (finances[index -1][1]);
-  */
+  }
+  change.forEach(getGreatest)
+  change.forEach(getLeast)
+
+
+  function averageChange(avg){
+    var average = totalChange / avg.length;
+    var totalChange = 0;
+    avg.forEach(element => {
+      totalChange += element[1];
+    })
+    return avg;
+  }
     
+  // Global variable:
+
+  var changeAVG = averageChange(change)
+
   
   /*
   //This is the calculation for average profits
