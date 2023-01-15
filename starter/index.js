@@ -9,6 +9,13 @@
 // A variable for net profits
 // A variable for net losses
 
+// I want the following results to be logged to the console:
+// Total number of months;
+// Total profit;
+// Average change;
+// Greatest increase in profits;
+// Greatest decrease in profits.
+
 
 
 
@@ -109,8 +116,11 @@ var finances = [
 ]
 
 var total = 0
-var net = 0
-var change = 0
+var net =[]
+var change = [] //global var
+var least = ["", 99999999]
+var greatest = ["", 0]
+
 //var least = ["",99999999]
 //var greatest = ["",0]
 
@@ -119,14 +129,32 @@ var change = 0
     total += finances[index][1];  
         
   }
+// For loop: net profit and loss. 
+  for (let index = 0; index < finances.length; index++){
+    net += finances[index][1];
 
-  for (let index = 0; index < finances; index++){
-    net = finances.length[index][-1][1] - (finances [index][1])
+    if( index>=1){
+      change.push([finances [index][0], finances [index] [1] -finances[index - 1][1]])
+    }
 
   }
-//for (let index = 0; index < finances.length; index++){
-    //greatestIncrease = finances[index][-1][1] - (finances [index][1])
+// This is the code for the net profit calculation
+  for (let index = 1; index < finances.length; index++){
+    net[index-1] = finances[index][1] - (finances[index -1][1]);
+  
+    
+  }
+  /*
+  //This is the calculation for average profits
+  for (let sum += total < finances.length; index++){
+    average[index-1] = finances[index][1] - (finances[index-1][1]);
+  }
+  */
+  
+  console.log(average);
 
+  console.log(net)
+  console.log(net.length)
    
   console.log(total)
   console.log(finances.length)
