@@ -150,6 +150,7 @@ var finances = [
         }
     
       }
+      //call functions for whole array
       change.forEach(getGreatest)
       change.forEach(getLeast)
     
@@ -162,17 +163,19 @@ var finances = [
         var average = totalChange / avg.length;
         return avg;
       }
-     
-    
-    
-      
-      
-    
-      console.log("Financial Analyses");
-      
-      console.log(total);
-      console.log(finances.length);
-      console.log(greatest.length);
+     var changeAvg = Math.floor(averageChange(change))
 
-      console.log(least.length);
+
+    
+    
+      
+      
+    
+      console.log("Financial Analyses:");
+      console.log("Total Months:" + " " + finances.length);
+      console.log("Total:" + " " + total);
+      console.log("Average Change" + " " + changeAvg);
+      console.log("Greatest Increase in Profits:" + " " + greatest[0] + greatest[1]);
+      console.log("Greatest Decrease in Profits:" + " " + least[0] + least[1])
+      
      
