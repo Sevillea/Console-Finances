@@ -123,22 +123,14 @@ var finances = [
     var greatest = ["", 0]
     var change = [] //global var
     
-    //var least = ["",99999999]
-    //var greatest = ["",0]
-    
-      for (let index = 0; index < finances.length; index++){
-        //total = total + finances[index][1] IS THE BELOW:
-        total += finances[index][1];  
-            
-      }
+     
     // For loop: net profit and loss over period.
       for (let index = 0; index < finances.length; index++){
-        net += finances[index][1];
-    
+        total += finances[index][1];
+     
         if( index>=1){
           change.push([finances [index][0], finances [index][1]-finances[index-1][1]])
         }
-    
       }
       /*
       for (let index = 1; index < finances.length; index++){
@@ -163,13 +155,12 @@ var finances = [
     
     
       function averageChange(avg){
-        var average = totalChange / avg.length;
         var totalChange = 0;
         avg.forEach(element => {
           totalChange += element[1];
         })
-        console.log (
-          "average Change:" + averageChange);
+        var average = totalChange / avg.length;
+        return avg;
       }
      
     
@@ -178,7 +169,7 @@ var finances = [
       
     
       console.log("Financial Analyses");
-      console.log(net.length);//net.length
+      
       console.log(total);
       console.log(finances.length);
       console.log(greatest.length);
