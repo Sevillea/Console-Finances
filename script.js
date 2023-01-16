@@ -117,12 +117,11 @@ var finances = [
     ['Feb-2017', 671099],
     ]
     
-    
-    var net =[]
-    var change = [] //global var
+    //global variables:
+    var total = 0
     var least = ["", 99999999]
     var greatest = ["", 0]
-    var total = 0
+    var change = [] //global var
     
     //var least = ["",99999999]
     //var greatest = ["",0]
@@ -169,17 +168,20 @@ var finances = [
         avg.forEach(element => {
           totalChange += element[1];
         })
-        return avg;
+        console.log (
+          "average Change:" + averageChange);
       }
-        
      
     
     
       
       
     
-     
-      console.log(net.length)
-      console.log(total)
-      console.log(finances.length)
+      console.log("Financial Analyses");
+      console.log(net.length);//net.length
+      console.log(total);
+      console.log(finances.length);
+      console.log(greatest.length);
+
+      console.log(least.length);
      
