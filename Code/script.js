@@ -1,4 +1,4 @@
-//Corrupt
+
 
 // We have a variable for 'finances' already created
 // Determine var.length 
